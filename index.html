@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks Playbonds</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedbacks de Clientes Playbonds</h1>
+        
+        <!-- Formulário de entrada -->
+        <form id="feedbackForm">
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+            
+            <label for="usuario">Nome de Usuário:</label>
+            <input type="text" id="usuario" required>
+            
+            <label for="area">Área:</label>
+            <select id="area">
+                <option value="video_bingo">Video Bingo</option>
+                <option value="cassino">Cassino</option>
+                <option value="esportes">Esportes</option>
+                <option value="sala_bingo">Sala de Bingo</option>
+            </select>
+            
+            <label for="nivel">Nível:</label>
+            <select id="nivel">
+                <option value="ativacao">Ativação</option>
+                <option value="cobre">Cobre</option>
+                <option value="ferro">Ferro</option>
+                <option value="bronze">Bronze</option>
+                <option value="prata">Prata</option>
+                <option value="outro">Outro</option>
+                <option value="diamante">Diamante</option>
+                <option value="platina">Platina</option>
+                <option value="titanio">Titanio</option>
+            </select>
+            
+            <button type="submit">Salvar Feedback</button>
+        </form>
+
+        <hr>
+
+        <h2>Feedbacks Registrados</h2>
+        <div id="feedbacks"></div>
+
+        <button id="exportBtn">Exportar para XLS</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
